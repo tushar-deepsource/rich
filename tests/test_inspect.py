@@ -68,7 +68,6 @@ def test_render():
 
 
 def test_inspect_text():
-
     expected = (
         "╭──────────────── <class 'str'> ─────────────────╮\n"
         "│ str(object='') -> str                          │\n"
@@ -86,7 +85,6 @@ def test_inspect_text():
 @skip_py36
 @skip_py37
 def test_inspect_empty_dict():
-
     expected = (
         "╭──────────────── <class 'dict'> ────────────────╮\n"
         "│ dict() -> new empty dictionary                 │\n"
@@ -108,7 +106,6 @@ def test_inspect_empty_dict():
 
 
 def test_inspect_builtin_function():
-
     expected = (
         "╭────────── <built-in function print> ───────────╮\n"
         "│ def print(...)                                 │\n"
@@ -125,7 +122,6 @@ def test_inspect_builtin_function():
 
 @skip_py36
 def test_inspect_integer():
-
     expected = (
         "╭────── <class 'int'> ───────╮\n"
         "│ int([x]) -> integer        │\n"
@@ -142,7 +138,6 @@ def test_inspect_integer():
 
 @skip_py36
 def test_inspect_integer_with_value():
-
     expected = "╭────── <class 'int'> ───────╮\n│ int([x]) -> integer        │\n│ int(x, base=10) -> integer │\n│                            │\n│ ╭────────────────────────╮ │\n│ │ 1                      │ │\n│ ╰────────────────────────╯ │\n│                            │\n│ denominator = 1            │\n│        imag = 0            │\n│   numerator = 1            │\n│        real = 1            │\n╰────────────────────────────╯\n"
     value = render(1, value=True)
     print(repr(value))
@@ -152,7 +147,6 @@ def test_inspect_integer_with_value():
 @skip_py36
 @skip_py37
 def test_inspect_integer_with_methods():
-
     expected = (
         "╭──────────────── <class 'int'> ─────────────────╮\n"
         "│ int([x]) -> integer                            │\n"

@@ -965,7 +965,6 @@ class Progress(JupyterMixin):
 
 
 if __name__ == "__main__":  # pragma: no coverage
-
     import random
     import time
 
@@ -1021,7 +1020,6 @@ if __name__ == "__main__":  # pragma: no coverage
         console=console,
         transient=True,
     ) as progress:
-
         task1 = progress.add_task("[red]Downloading", total=1000)
         task2 = progress.add_task("[green]Processing", total=1000)
         task3 = progress.add_task("[yellow]Thinking", total=1000, start=False)

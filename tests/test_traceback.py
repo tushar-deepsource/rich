@@ -213,7 +213,6 @@ def test_guess_lexer():
 
 
 if __name__ == "__main__":  # pragma: no cover
-
     expected = render(get_exception())
 
     with open("_exception_render.py", "wt") as fh:

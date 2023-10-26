@@ -158,7 +158,6 @@ def test_escape_escape():
 
 
 def test_events():
-
     result = render("[@click]Hello[/@click] [@click='view.toggle', 'left']World[/]")
     assert str(result) == "Hello World"
 
