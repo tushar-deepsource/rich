@@ -24,7 +24,6 @@ try:
         windll = None
         raise ImportError("Not windows")
 except (AttributeError, ImportError, ValueError):
-
     # Fallback if we can't load the Windows DLL
     def get_windows_console_features() -> WindowsConsoleFeatures:
         features = WindowsConsoleFeatures()
@@ -32,7 +31,6 @@ except (AttributeError, ImportError, ValueError):
 
 
 else:
-
     STDOUT = -11
     ENABLE_VIRTUAL_TERMINAL_PROCESSING = 4
     _GetConsoleMode = windll.kernel32.GetConsoleMode

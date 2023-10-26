@@ -17,7 +17,6 @@ from .text import Text, TextType
 
 
 class MarkdownElement:
-
     new_line: ClassVar[bool] = True
 
     @classmethod
@@ -530,7 +529,6 @@ class Markdown(JupyterMixin):
 
 
 if __name__ == "__main__":  # pragma: no cover
-
     import argparse
     import sys
 

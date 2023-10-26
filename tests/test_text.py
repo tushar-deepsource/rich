@@ -665,7 +665,6 @@ foo = [
 
 
 def test_slice():
-
     text = Text.from_markup("[red]foo [bold]bar[/red] baz[/bold]")
     assert text[0] == Text("f", spans=[Span(0, 1, "red")])
     assert text[4] == Text("b", spans=[Span(0, 1, "red"), Span(0, 1, "bold")])
